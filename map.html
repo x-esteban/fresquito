@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_d4c0052ca3b7e3596791c6ae1abef348 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_d4c0052ca3b7e3596791c6ae1abef348" ></div>
+        
+</body>
+<script>    
+    
+            var map_d4c0052ca3b7e3596791c6ae1abef348 = L.map(
+                "map_d4c0052ca3b7e3596791c6ae1abef348",
+                {
+                    center: [40.4165, -3.70256],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 6.5,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_4260d7c28613f10d515d2e09803fa556 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_d4c0052ca3b7e3596791c6ae1abef348);
+        
+    
+            var marker_83e43897def30d3c1d1cff9f8ed579a8 = L.marker(
+                [42.4958721, 1.2580179],
+                {}
+            ).addTo(map_d4c0052ca3b7e3596791c6ae1abef348);
+        
+    
+            var icon_5259100c6fdd0aa1eeb961f87193920d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "glyphicon glyphicon-cloud", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_83e43897def30d3c1d1cff9f8ed579a8.setIcon(icon_5259100c6fdd0aa1eeb961f87193920d);
+        
+    
+        var popup_7c5ce1f767544caeb441a1a653bd51c8 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e16f1cae0f7e9d626409fa7abf4b42b7 = $(`<div id="html_e16f1cae0f7e9d626409fa7abf4b42b7" style="width: 100.0%; height: 100.0%;">Mallolís, Lleida 6ºC</div>`)[0];
+            popup_7c5ce1f767544caeb441a1a653bd51c8.setContent(html_e16f1cae0f7e9d626409fa7abf4b42b7);
+        
+
+        marker_83e43897def30d3c1d1cff9f8ed579a8.bindPopup(popup_7c5ce1f767544caeb441a1a653bd51c8)
+        ;
+
+        
+    
+    
+            var marker_817f438775404093d66c469f3a7cd87e = L.marker(
+                [37.75591, -5.1313666],
+                {}
+            ).addTo(map_d4c0052ca3b7e3596791c6ae1abef348);
+        
+    
+            var icon_b95583539f5d6da560dc79ef7c2133aa = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "glyphicon glyphicon-fire", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_817f438775404093d66c469f3a7cd87e.setIcon(icon_b95583539f5d6da560dc79ef7c2133aa);
+        
+    
+        var popup_ece9aa0b9fcea2bd3c67921b0a0b0501 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_54ef0e06c3128407e46019267760e9c8 = $(`<div id="html_54ef0e06c3128407e46019267760e9c8" style="width: 100.0%; height: 100.0%;">Ochavillo del Río, Córdoba 33ºC</div>`)[0];
+            popup_ece9aa0b9fcea2bd3c67921b0a0b0501.setContent(html_54ef0e06c3128407e46019267760e9c8);
+        
+
+        marker_817f438775404093d66c469f3a7cd87e.bindPopup(popup_ece9aa0b9fcea2bd3c67921b0a0b0501)
+        ;
+
+        
+    
+</script>
