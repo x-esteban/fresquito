@@ -9,5 +9,8 @@ The script running on the pi performs the following:
    5. Exports the map as an .html file.
 
 This script runs automatically every 20 minutes via a crontab. Another crontab sends the file to the required **Nginx** folder with the necessary permissions.
+You can find the **Fresquito** website on the following link:
+
+www.fresquito.es
 
 For more information hit me up at info@xesteban.com 😉
