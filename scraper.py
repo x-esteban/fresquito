@@ -1,5 +1,3 @@
-# Importing libraries.
-
 import pandas as pd
 import requests
 from datetime import datetime
@@ -15,16 +13,25 @@ hour = datetime.now().hour
 id_list = df['id'].tolist()
 
 
-def scraper():
+def main_driver():
+    """
+    This function scrapes the AEMET links for each town in Spain, storing the forecasted temperatures for the next ~72
+    hours in a dataframe.
+    """
     # Scraping all links and holding the data as a list of dictionaries.
     meteo = []
 
     def fetch_links(n: str, session: requests.Session):
+        """
+        This function scrapes the AEMET link for a given town and appends the resulting dict to an external list.
+        :param n: The town ID as stated in the AEMET.csv file.
+        :param session: Requests session, re-used to optimize net traffic.
+        :return: None, it appends the resulting dict to the external meteo list.
+        """
         now_hour = datetime.now().hour
         try:
             page = 'https://www.aemet.es/xml/municipios_h/localidad_h_' + str(n) + '.xml'
             url_link = session.get(page)
-            print('--Scraping ' + page + ' --')
 
             # Parsing the xml:
             file = bs.BeautifulSoup(url_link.text, features="lxml")
@@ -55,6 +62,6 @@ def scraper():
     meteo_data.to_csv('meteo_data.csv', index=False)
 
 
-scraper()
+main_driver()
 
 print('--Process finished--')
