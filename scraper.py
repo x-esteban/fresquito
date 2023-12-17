@@ -6,7 +6,7 @@ from tqdm import tqdm
 
 print('--Starting Fresquito Scraper--\n')
 
-df = pd.read_csv('AEMET.csv')
+df = pd.read_csv('data/AEMET.csv')
 
 hour = datetime.now().hour
 
@@ -59,8 +59,7 @@ def main_driver():
 
     # Storing the result as a dataframe, merging it with the original and saving:
     meteo_data = pd.merge(df, pd.DataFrame(meteo), on=['id'])
-    meteo_data.to_csv('meteo_data.csv', index=False)
-
+    meteo_data.to_csv('data/meteo_data.csv', index=False)
 
 main_driver()
 
